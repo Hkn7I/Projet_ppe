@@ -5,14 +5,13 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 // Paramètres de connexion
-$host = 'localhost';
+$host = 'hiuhui';
 $dbname = 'database_ppe';
-$username = 'root';
-$password = 'root';
+$username = 'uyfguyfg';
 
 try {
     // Création de la connexion PDO
-    $mysqlClient = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+    $mysqlClient = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, '');
     $mysqlClient->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (Exception $e) {
     die('Erreur de connexion : ' . $e->getMessage());

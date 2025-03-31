@@ -7,7 +7,7 @@ if (isset($_GET['id'])) {
     $id = (int)$_GET['id'];
 
     // Récupérer les données de la personne
-    $stmt = $mysqlClient->prepare("SELECT * FROM personnes WHERE id = :id");
+    $stmt = $mysqlClient->prepare("SELECT * FROM utilisateurs WHERE id = :id");
     $stmt->bindParam(':id', $id, PDO::PARAM_INT);
     $stmt->execute();
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
